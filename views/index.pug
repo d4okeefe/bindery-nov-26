@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .container
+    h3 Create book from Google Scholar Doc
+  .container
+    fieldset
+      form(action="/data" method="post")
+        input(type="text" name="make_book[filename]")
+        button(type="submit" value="Submit")
+          | Make book
+  .container
+    ul
+      li Example 1: 
+        span(style="font-weight:bold") Thompson v. Hebdon
+      .container
+        a#a1(href="https://scholar.google.com/scholar_case?case=10702270479218690562&q=david+thompson+v.+heather+hebdon&hl=en&as_sdt=6,28" target="_blank")
+          | Link to Google Scholar
+      .container
+        fieldset
+          form(action="/data" method="post")
+            button(type="text" name="make_book[filename]" value="Thompson v. Hebdon, 909 F. 3d 1027 - Court of Appeals, 9th Circuit 2018 - Google Scholar.html")
+              | Make book
+      li Example 2: 
+        span(style="font-weight:bold") Karingithi v. Whitaker
+      .container
+        a#a2(href="https://scholar.google.com/scholar_case?case=9394297197388356157&q=KARINGITHI&hl=en&as_sdt=6,28" target="_blank")
+          | Link to Google Scholar
+      .container
+        fieldset
+          form(action="/data" method="post")
+            button(type="text" name="make_book[filename]" value="Karingithi v. Whitaker, 913 F. 3d 1158 - Court of Appeals, 9th Circuit 2019 - Google Scholar.html")            
+              | Make book
+      li Example 3: 
+        span(style="font-weight:bold") Pennsylvania v. Trump
+      .container
+        a#a3(href="https://scholar.google.com/scholar_case?case=17520573883474493310&q=Little+Sisters+of+the+Poor+Saints+Peter++v.+Pennsylvania&hl=en&as_sdt=6,28" target="_blank")
+          | Link to Google Scholar
+      .container
+        form(action="/data" method="post")
+          button(type="text" name="make_book[filename]" value="Commonwealth of Pa. v. PRESIDENT US OF AMERICA, 888 F. 3d 52 - Court of Appeals, 3rd Circuit 2018 - Google Scholar.html")
+            | Make book

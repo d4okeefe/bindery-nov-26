@@ -1,0 +1,33 @@
+* {
+    font-family: "New Century Schoolbook" !Important;
+    font-size: 16px !Important;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+}
+blockquote {
+    text-align: justify;
+}
+
+#gs_dont_print{
+    display: none;
+}
+
+.gsl_pagenum{
+    display: none;
+}
+.gsl_pagenum2{
+    display: none;
+}
+.gsl_hash{
+    display: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+

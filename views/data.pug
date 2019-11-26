@@ -1,0 +1,34 @@
+extends layout
+
+block headermaterial
+  link(rel="stylesheet" type="text/css" href="../public/style.css")
+  
+
+block content
+  div#contentdiv !{inner_html}
+
+
+  endscript
+    script(type="text/javascript").
+      src="https://unpkg.com/bindery"
+    script(type="text/javascript").
+      Bindery.makeBook({ 
+        content: "#contentdiv",
+        pageSetup: {
+          size: { width: '6.125in', height: '9.25in' },
+          margin: { top: '72pt', inner: '72pt', outer: '72pt', bottom: '72pt' },
+        },
+        rules: [
+          Bindery.PageBreak({ selector: 'h2', position: 'before' }),
+
+          Bindery.RunningHeader({
+            render: (page) => {
+              if (page.isLeft || page.isRight)
+                return `<div class="running-header" style="text-align:center"><span class="page-number">${ page.number }</span></div>`;
+              }
+          })
+
+
+
+        ],        
+      });
