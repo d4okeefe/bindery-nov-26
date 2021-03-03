@@ -16,7 +16,7 @@
     "cheerio": "^0.22.0",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "engines": {
     "node": "8.x"
